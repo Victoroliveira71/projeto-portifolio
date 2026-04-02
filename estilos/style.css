@@ -185,10 +185,39 @@ h2{
     border-radius: 10px;
   }
 
+  #formaçao-container{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .curso{
+    background-color: var(--fundo-card);
+    border-radius: 10px;
+    border-left: 5px solid var(--destaque-inverso);
+    padding: 10px;
+  }
+
+  .curso:hover{
+     border-left: 20px solid var(--destaque);
+     transition: border 0.5s;
+     cursor: pointer;
+  }
+
+  .periodo{
+    color: var(--texto);
+    font-weight: bolder;
+    font-size: 0.9em;
+  }
+
+  .instituiçao{
+    color: var(--destaque-inverso);
+  }
 
   @media screen and (min-width:768px) {
      #skill-container {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr;
      }
+    
   }
