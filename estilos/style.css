@@ -17,7 +17,7 @@
 body{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.5em;
-    background-color: #ffffff;
+    background-color: var(--fundo-principal);
     color: #222222;
 }
 
@@ -99,7 +99,7 @@ h1{
 
 h2{
   color: var(--destaque);
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
   .social{
@@ -125,7 +125,7 @@ h2{
   }
 
   article{
-    background-color: var(--fundo-principal);
+    background-color: var(--fundo-card);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -186,13 +186,14 @@ h2{
   }
 
   #formaçao-container{
+    background-color: var();
     display: flex;
     flex-direction: column-reverse;
     gap: 20px;
   }
 
   .curso{
-    background-color: var(--fundo-card);
+    background-color: var(--fundo-principal);
     border-radius: 10px;
     border-left: 5px solid var(--destaque-inverso);
     padding: 10px;
@@ -213,6 +214,48 @@ h2{
   .instituiçao{
     color: var(--destaque-inverso);
   }
+
+  #projetos-container{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .projeto{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--fundo-principal);
+    border-radius: 10px;
+    border-left: 5px solid var(--destaque-inverso);
+    padding: 10px;
+  }
+
+  .projeto:hover{
+     border-left: 20px solid var(--destaque);
+     transition: 0.5s;
+  }
+
+  .projeto> img{
+    border-radius: 10px;
+  }
+
+  footer{
+    background-color: var(--destaque);
+    color: var(--texto-inverso);
+    padding: 20px;
+    text-align: center;
+  }
+
+  footer>p>a{
+    text-decoration: none;
+    color: var(--texto-inverso);
+    font-weight: bolder;
+  }
+
+  footer>p>a:hover{
+    color: var(--destaque-inverso);
+  }
+
 
   @media screen and (min-width:768px) {
      #skill-container {
