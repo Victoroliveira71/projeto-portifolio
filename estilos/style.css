@@ -14,11 +14,21 @@
   padding: 0%;
 }
 
+body.escuro{
+  --fundo-principal: #222222;
+  --texto: #e0e0e0;
+  --texto-inverso: #333333;
+  --destaque: #ff5522;
+  --destaque-inverso: #a73917;
+  --fundo-card: #444444;
+}
+
 body{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.5em;
     background-color: var(--fundo-principal);
     color: #222222;
+     transition: background-color 0.5s, color 0.5s;
 }
 
 :root{
@@ -32,8 +42,8 @@ body{
 }
 
 header{
-  background-color: #0077ff;
-  color: #222222;
+  background-color: var(--destaque);
+  color: var(--texto);
   padding: 10px;
   position: sticky;
   top: 0;
@@ -56,7 +66,7 @@ header{
 }
 
 li> a{
-  color: #ffffff;
+  color: var(--fundo-card);
   text-decoration: none;
   font-weight: 600px;
   padding: 12px 15px;
@@ -64,8 +74,8 @@ li> a{
 }
 
 li>a:hover{
-  background-color: #66bbff;
-  color: #0077ff;
+  background-color: var(--destaque-inverso);
+  color: var(--destaque);
   transition: background-color 0.5s, color 0.5s;
 }
 
@@ -76,10 +86,15 @@ main{
 }
 
 #ficha{
+  border-radius: 5px;
   margin-top: 20px;
   padding: 20px;
   background-color: var(--fundo-card);
   grid-column: 2;
+}
+
+#ficha>p{
+  color: var(--texto);
 }
 
 img#foto{
@@ -89,14 +104,14 @@ img#foto{
   object-fit: cover;
   overflow: hidden;
   aspect-ratio: 1/1;
-  border:5px solid #ffffff;
-  outline:5px solid #0077ff;
+  border:5px solid var(--fundo-card);
+  outline:5px solid var(--destaque);
   display: block;
   margin: auto;
 }
 
 h1{
-  color: #0077ff;
+  color: var(--destaque);
   text-align: center;
   padding: 15px;
 }
@@ -116,7 +131,7 @@ h2{
   }
 
   .social>a{
-    color: #0077ff;
+    color: var(--destaque);
   }
 
   .social>a:hover{
@@ -172,13 +187,13 @@ h2{
   }
 
   .porcent{
-    color: #0077ff;
+    color: var(--texto);
     font-weight: bold;
     align-items: center;
   }
 
   .barra{
-    background-color: var(--fundo-card);
+    background-color: var(--fundo-principal);
     height: 10px;
     width: 100%;
     border-radius: 10px;
@@ -214,6 +229,10 @@ h2{
     color: var(--texto);
     font-weight: bolder;
     font-size: 0.9em;
+  }
+
+  .escolaridade{
+    color: var(--texto);
   }
 
   .instituiçao{
